@@ -11,7 +11,7 @@ def fast_f_t(x : np.ndarray,y:np.ndarray, M:int = 500):
 		y -= np.mean(y)
 		k = np.fft.fftfreq(M, d=dt)
 		yw = np.fft.fft(y)
-		return 2*np.pi*fftshift(k), fftshift(yw)
+		return 2*np.pi*fftshift(k), fftshift(yw)*dt
 
 
 def average_fft(x, y, Ms):
